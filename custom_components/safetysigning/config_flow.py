@@ -36,10 +36,6 @@ class CronsShared:
             "scope":"https://www.googleapis.com/auth/drive",
             "token_type":"Bearer"
         }
-        self._supported_countries: Dict = holidays.list_supported_countries()
-        self.country_codes: List = sorted(
-            [cron for cron in self._supported_countries]
-        )
         self.errors: Dict = {}
         self.data_schema: OrderedDict = OrderedDict()
         self._defaults = {
@@ -242,64 +238,3 @@ class CronsFlowHandler(config_entries.ConfigFlow):
             title=self.shared_class.name, data=self.shared_class.data
         )
 
-    @staticmethod
-    @callback
-    def async_get_options_flow(config_entry: ConfigEntry):
-        """Return options flow handler, or empty options flow if no unique_id."""
-        return OptionsFlowHandler(config_entry)
-
-
-class OptionsFlowHandler(config_entries.OptionsFlow):
-    """Options flow handler."""
-
-    def __init__(self, config_entry: ConfigEntry):
-        """Create and initualize class variables."""
-        self.shared_class = CronsShared(config_entry.data)
-
-    async def async_step_init(self, user_input: Optional[Dict] = None):
-        """Genral parameters."""
-        if self.shared_class.step1_user_init(user_input, options=True):
-            return await self.async_step_subdiv(re_entry=False)
-        return self.async_show_form(
-            step_id="init",
-            data_schema=vol.Schema(self.shared_class.data_schema),
-            errors=self.shared_class.errors,
-        )
-
-    async def async_step_subdiv(
-        self, user_input: Dict = {}, re_entry=True
-    ):  # pylint: disable=dangerous-default-value
-        """Step 2 - enter country subdivision (e.g. states).
-
-        Can be submitted without selecting any subdivision.
-        In this case the user input will be blank.
-        So checking if it is blank won't help, checking re_entry field
-        """
-        self.shared_class.step2_subdiv(user_input)
-        if re_entry:
-            return await self.async_step_pop(re_entry=False)
-        return self.async_show_form(
-            step_id="subdiv",
-            data_schema=vol.Schema(self.shared_class.data_schema),
-            errors=self.shared_class.errors,
-        )
-
-    async def async_step_pop(
-        self, user_input: Dict = {}, re_entry=True
-    ):  # pylint: disable=dangerous-default-value
-        """Step 3 - enter Cron to pop.
-
-        Can be submitted without selecting any Cron to pop.
-        In this case the user input will be blank.
-        So checking if it is blank won't help, checking re_entry field
-        """
-        self.shared_class.step3_pop(user_input)
-        if re_entry:
-            return self.async_create_entry(
-                title=self.shared_class.name, data=self.shared_class.data
-            )
-        return self.async_show_form(
-            step_id="pop",
-            data_schema=vol.Schema(self.shared_class.data_schema),
-            errors=self.shared_class.errors,
-        )
