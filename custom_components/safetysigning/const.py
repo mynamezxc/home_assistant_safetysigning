@@ -2,7 +2,7 @@
 
 # Constants for crons.
 # Base component constants
-DOMAIN = "crons"
+DOMAIN = "safetysigning"
 TOKEN_PLATFORM = "token"
 ATTRIBUTION = "Data from this is provided by crons."
 
