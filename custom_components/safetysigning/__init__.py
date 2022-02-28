@@ -18,7 +18,7 @@ MIN_TIME_BETWEEN_UPDATES = timedelta(seconds=30)
 
 _LOGGER = logging.getLogger(__name__)
 
-CALENDAR_SCHEMA = vol.Schema(
+TOKEN_SCHEMA = vol.Schema(
     {
         vol.Required(CONF_NAME): str,
         vol.Optional(const.CONF_ICON_NORMAL): cv.icon,
@@ -36,8 +36,8 @@ CONFIG_SCHEMA = vol.Schema(
     {
         const.DOMAIN: vol.Schema(
             {
-                vol.Optional(const.CONF_CALENDARS): vol.All(
-                    cv.ensure_list, [CALENDAR_SCHEMA]
+                vol.Optional(const.CONF_TOKENS): vol.All(
+                    cv.ensure_list, [TOKEN_SCHEMA]
                 )
             }
         )
@@ -58,7 +58,7 @@ async def async_setup_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> b
     # Add token
     hass.async_create_task(
         hass.config_entries.async_forward_entry_setup(
-            config_entry, const.CALENDAR_PLATFORM
+            config_entry, const.TOKEN_PLATFORM
         )
     )
     return True
@@ -68,7 +68,7 @@ async def async_remove_entry(hass: HomeAssistant, config_entry: ConfigEntry):
     """Handle removal of an entry."""
     try:
         await hass.config_entries.async_forward_entry_unload(
-            config_entry, const.CALENDAR_PLATFORM
+            config_entry, const.TOKEN_PLATFORM
         )
         _LOGGER.info("Successfully removed token from the crons integration")
     except ValueError:
@@ -119,9 +119,9 @@ async def update_listener(hass: HomeAssistant, entry) -> None:
     if len(entry.options) > 0:
         entry.data = entry.options
         entry.options = {}
-    await hass.config_entries.async_forward_entry_unload(entry, const.CALENDAR_PLATFORM)
+    await hass.config_entries.async_forward_entry_unload(entry, const.TOKEN_PLATFORM)
     hass.async_add_job(
-        hass.config_entries.async_forward_entry_setup(entry, const.CALENDAR_PLATFORM)
+        hass.config_entries.async_forward_entry_setup(entry, const.TOKEN_PLATFORM)
     )
 
 
