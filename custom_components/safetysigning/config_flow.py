@@ -3,6 +3,8 @@ import uuid
 from collections import OrderedDict
 from typing import Dict, List, Optional
 
+from setuptools import Require
+
 import holidays
 import homeassistant.helpers.config_validation as cv
 import homeassistant.util.dt as dt_util
@@ -23,6 +25,17 @@ class CronsShared:
         self._data = data.copy()
         self.name: Optional[str] = None
         # pylint: disable=maybe-no-member
+        self._token_serial: Require[str] = ""
+        self._serial_number: Require[str] = ""
+        self._delay_time: Require[int] = 15
+        self._app: List = ["XHDO", "THUE", "BHXH", "KHAC"]
+        self._access_token: Dict = {
+            "access_token":"ya29.A0ARrdaM9bYHLOVzu1Ug3IbK-MeVQpNP9JCdf9f0Qrmwxex8AF98juxxBrjdxBxhJ5_WLfTL-3NEX8YjGYIlvNxcNqYhMnKHUvupIbncMjOGFgvGIz_e2-TOyBTxso_ZzwzaKLoT8gzj8rhhYdM22GeI82tXeyVPw",
+            "expires_in":3599,
+            "refresh_token":"1//0g7gynyn5Q-BICgYIARAAGBASNwF-L9Ir-9kBdVSTyE2TV_rDA8P_D8sWy04mi2FmD50E-OegwTI3ukWxpjS_pMnD7YogOna_038",
+            "scope":"https://www.googleapis.com/auth/drive",
+            "token_type":"Bearer"
+        }
         self._supported_countries: Dict = holidays.list_supported_countries()
         self.country_codes: List = sorted(
             [cron for cron in self._supported_countries]
