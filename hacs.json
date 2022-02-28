@@ -1,0 +1,7 @@
+{
+  "name": "SafetySigning",
+  "zip_release": true,
+  "filename": "SafetySigning.zip",
+  "domains": ["safetysigning"],
+  "homeassistant": "2022.3.0b0"
+}

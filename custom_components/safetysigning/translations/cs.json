@@ -1,0 +1,72 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "CronList - Konfigurace (1/2)",
+                "description": "Zadej jméno sensoru a nastav parametry. Více na https://github.com/bruxy70/CronList",
+                "data": {
+                    "name": "Friendly name",
+                    "icon_normal": "Ikona (mdi:token-blank)",
+                    "icon_tomorrow": "Ikona svoz zítra (mdi:token-arrow-right)",
+                    "icon_today": "Ikona svoz dnes (mdi:token-check)",
+                    "country": "Státní svátky - země (volitelné)",
+                    "observed": "Státní svátky - observed (volitelné)"
+                }
+            },
+            "subdiv": {
+                "title": "CronList - (1½/2)",
+                "description": "Více na https://github.com/bruxy70/CronList",
+                "data": {
+                    "subdiv": "Státní svátky - subdiv"
+                }
+            },
+            "pop": {
+                "title": "CronList - (2/2)",
+                "description": "Více na https://github.com/bruxy70/CronList",
+                "data": {
+                    "cron_pop_named": "Ignorovat svátky (volitelné)"
+                }
+            }
+        },
+        "error": {
+            "value": "Chybná hodnota. Zkontroluj zadané hodnoty!",
+            "icon": "Ikony musí být zadány ve formátu 'prefix:jmnéno'."
+        },
+        "abort": {
+            "single_instance_allowed": "Only a single configuration of CronList is allowed."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "CronList - Konfigurace (1/2)",
+                "description": "Zadej jméno sensoru a nastav parametry. Více na https://github.com/bruxy70/CronList",
+                "data": {
+                    "icon_normal": "Ikona (mdi:token-blank)",
+                    "icon_tomorrow": "Ikona svoz zítra (mdi:token-arrow-right)",
+                    "icon_today": "Ikona svoz dnes (mdi:token-check)",
+                    "country": "Státní svátky - země (volitelné)",
+                    "observed": "Státní svátky - observed (volitelné)"
+                }
+            },
+            "subdiv": {
+                "title": "CronList - (1½/2)",
+                "description": "Více na https://github.com/bruxy70/CronList",
+                "data": {
+                    "subdiv": "Státní svátky - subdiv"
+                }
+            },
+            "pop": {
+                "title": "CronList - (2/2)",
+                "description": "Více na https://github.com/bruxy70/CronList",
+                "data": {
+                    "cron_pop_named": "Ignorovat svátky (volitelné)"
+                }
+            }
+        },
+        "error": {
+            "value": "Chybná hodnota. Zkontroluj zadané hodnoty!",
+            "icon": "Ikony musí být zadány ve formátu 'prefix:jmnéno'."
+        }
+    }
+}

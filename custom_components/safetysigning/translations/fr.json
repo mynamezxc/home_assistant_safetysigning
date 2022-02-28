@@ -1,0 +1,73 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "CronList (1/2)",
+                "description": "Définir le nom du capteur et configurer les paramètres du capteur. Plus d'info sur https://github.com/bruxy70/CronList",
+                "data": {
+                    "name": "Friendly name",
+                    "icon_normal": "Icône (mdi:token-blank)",
+                    "icon_tomorrow": "Icône pour collecte à jour J+1 (mdi:token-arrow-right)",
+                    "icon_today": "Icône pour collecte au jour J (mdi:token-check)",
+                    "country": "Reporter les vacances au lendemain (optionnel)",
+                    "observed": "Observed (optional)"
+                }
+            },
+            "subdiv": {
+                "title": "CronList - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/CronList",
+                "data": {
+                    "subdiv": "CronList - subdividion"
+                }
+            },
+            "pop": {
+                "title": "CronList (2/2)",
+                "description": "Plus d'info sur https://github.com/bruxy70/CronList",
+                "data": {
+                    "cron_pop_named": "Ignorer les vacances (liste) - optionnel"
+                }
+            }
+        },
+        "error": {
+            "value": "Valeur invalide. Veuillez vérifier votre saisie !",
+            "icon": "Les icônes doivent être spécifiées dans le format 'prefix:name'."
+        },
+        "abort": {
+            "single_instance_allowed": "Une seule configuration de CronList est autorisée"
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "CronList (1/2)",
+                "description": "Définir le nom du capteur et configurer les paramètres du capteur. Plus d'info sur https://github.com/bruxy70/CronList",
+                "data": {
+                    "name": "Friendly name",
+                    "icon_normal": "Icône (mdi:token-blank)",
+                    "icon_tomorrow": "Icône pour collecte à jour J+1 (mdi:token-arrow-right)",
+                    "icon_today": "Icône pour collecte au jour J (mdi:token-check)",
+                    "country": "Reporter les vacances au lendemain (optionnel)",
+                    "observed": "Observed (optional)"
+                }
+            },
+            "subdiv": {
+                "title": "CronList - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/CronList",
+                "data": {
+                    "subdiv": "CronList - subdividion"
+                }
+            },
+            "pop": {
+                "title": "CronList (2/2)",
+                "description": "Plus d'info sur https://github.com/bruxy70/CronList",
+                "data": {
+                    "cron_pop_named": "Ignorer les vacances (liste) - optionnel"
+                }
+            }
+        },
+        "error": {
+            "value": "Valeur invalide. Veuillez vérifier votre saisie !",
+            "icon": "Les icônes doivent être spécifiées dans le format 'prefix:name'."
+        }
+    }
+}

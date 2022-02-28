@@ -1,0 +1,72 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "CronList (1/2)",
+                "description": "Sisesta nduri andmed. Rohkem infot leiab https://github.com/bruxy70/CronList",
+                "data": {
+                    "name": "Kuvatav nimi",
+                    "icon_normal": "Ikoon (mdi:token-blank) - valikuline",
+                    "icon_tomorrow": "Homme on prügivedu ikoon (mdi:token-arrow-right) - valikuline",
+                    "icon_today": "Täna on prügivedu ikoon (mdi:token-check) - valikuline",
+                    "country": "Liiguta prügivedu pühade tõttu üks päev edasi (valikuline)",
+                    "observed": "Ise määratud pühad (valikuline)"
+                }
+            },
+            "subdiv": {
+                "title": "CronList - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/CronList",
+                "data": {
+                    "subdiv": "CronList - subdividion"
+                }
+            },
+            "pop": {
+                "title": "CronList (2/2)",
+                "description": "Rohkem infot leiab https://github.com/bruxy70/CronList",
+                "data": {
+                    "cron_pop_named": "Eira pühi (nimekiri) - valikuline"
+                }
+            }
+        },
+        "error": {
+            "value": "Vigane sisestus, palun kontrolli!",
+            "icon": "Ikoonid tuleb esitada kujul 'prefix:name'."
+        },
+        "abort": {
+            "single_instance_allowed": "Lubatud on ainult üks prügiveo olemi sidumine."
+        }
+    },
+    "options": {
+        "step": {
+            "init": {
+                "title": "CronList (1/2)",
+                "description": "Sisesta nduri andmed. Rohkem infot leiab https://github.com/bruxy70/CronList",
+                "data": {
+                    "icon_normal": "Ikoon (mdi:token-blank) - valikuline",
+                    "icon_tomorrow": "Homme on prügivedu ikoon (mdi:token-arrow-right) - valikuline",
+                    "icon_today": "Täna on prügivedu ikoon (mdi:token-check) - valikuline",
+                    "country": "Liiguta prügivedu pühade tõttu üks päev edasi (valikuline)",
+                    "observed": "Ise määratud pühad (valikuline)"
+                }
+            },
+            "subdiv": {
+                "title": "CronList - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/CronList",
+                "data": {
+                    "subdiv": "CronList - subdividion"
+                }
+            },
+            "pop": {
+                "title": "CronList (2/2)",
+                "description": "Rohkem infot leiab https://github.com/bruxy70/CronList",
+                "data": {
+                    "cron_pop_named": "Eira pühi (nimekiri) - valikuline"
+                }
+            }
+        },
+        "error": {
+            "value": "Vigane sisestus, palun kontrolli!",
+            "icon": "Ikoonid tuleb esitada kujul 'prefix:name'."
+        }
+    }
+}
