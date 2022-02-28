@@ -2,8 +2,8 @@
     "config": {
         "step": {
             "user": {
-                "title": "CronList (1/2)",
-                "description": "Sisesta nduri andmed. Rohkem infot leiab https://github.com/bruxy70/CronList",
+                "title": "Crons (1/2)",
+                "description": "Sisesta nduri andmed. Rohkem infot leiab https://github.com/bruxy70/Crons",
                 "data": {
                     "name": "Kuvatav nimi",
                     "icon_normal": "Ikoon (mdi:token-blank) - valikuline",
@@ -14,15 +14,15 @@
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "CronList - subdividion"
+                    "subdiv": "Crons - subdividion"
                 }
             },
             "pop": {
-                "title": "CronList (2/2)",
-                "description": "Rohkem infot leiab https://github.com/bruxy70/CronList",
+                "title": "Crons (2/2)",
+                "description": "Rohkem infot leiab https://github.com/bruxy70/Crons",
                 "data": {
                     "cron_pop_named": "Eira pühi (nimekiri) - valikuline"
                 }
@@ -39,8 +39,8 @@
     "options": {
         "step": {
             "init": {
-                "title": "CronList (1/2)",
-                "description": "Sisesta nduri andmed. Rohkem infot leiab https://github.com/bruxy70/CronList",
+                "title": "Crons (1/2)",
+                "description": "Sisesta nduri andmed. Rohkem infot leiab https://github.com/bruxy70/Crons",
                 "data": {
                     "icon_normal": "Ikoon (mdi:token-blank) - valikuline",
                     "icon_tomorrow": "Homme on prügivedu ikoon (mdi:token-arrow-right) - valikuline",
@@ -50,15 +50,15 @@
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "CronList - subdividion"
+                    "subdiv": "Crons - subdividion"
                 }
             },
             "pop": {
-                "title": "CronList (2/2)",
-                "description": "Rohkem infot leiab https://github.com/bruxy70/CronList",
+                "title": "Crons (2/2)",
+                "description": "Rohkem infot leiab https://github.com/bruxy70/Crons",
                 "data": {
                     "cron_pop_named": "Eira pühi (nimekiri) - valikuline"
                 }

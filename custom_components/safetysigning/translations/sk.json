@@ -2,8 +2,8 @@
     "config": {
         "step": {
             "user": {
-                "title": "CronList (1/2)",
-                "description": "Zadej meno senzoru a nastav parametre. Viac na https://github.com/bruxy70/CronList",
+                "title": "Crons (1/2)",
+                "description": "Zadej meno senzoru a nastav parametre. Viac na https://github.com/bruxy70/Crons",
                 "data": {
                     "name": "Friendly name",
                     "icon_normal": "Ikona (mdi:token-blank)",
@@ -14,15 +14,15 @@
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "CronList - subdividion"
+                    "subdiv": "Crons - subdividion"
                 }
             },
             "pop": {
-                "title": "CronList (2/2)",
-                "description": "Viac na https://github.com/bruxy70/CronList",
+                "title": "Crons (2/2)",
+                "description": "Viac na https://github.com/bruxy70/Crons",
                 "data": {
                     "cron_pop_named": "Ignorovať sviatky (volitelné)"
                 }
@@ -33,14 +33,14 @@
             "icon": "Ikony musia býť zadané vo formáte 'prefix:meno'."
         },
         "abort": {
-            "single_instance_allowed": "Je povolená iba jedna konfigurácia CronList."
+            "single_instance_allowed": "Je povolená iba jedna konfigurácia Crons."
         }
     },
     "options": {
         "step": {
             "init": {
-                "title": "CronList (1/2)",
-                "description": "Zadej meno senzoru a nastav parametre. Viac na https://github.com/bruxy70/CronList",
+                "title": "Crons (1/2)",
+                "description": "Zadej meno senzoru a nastav parametre. Viac na https://github.com/bruxy70/Crons",
                 "data": {
                     "icon_normal": "Ikona (mdi:token-blank)",
                     "icon_tomorrow": "Ikona zvoz zajtra (mdi:token-arrow-right)",
@@ -50,15 +50,15 @@
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "CronList - subdividion"
+                    "subdiv": "Crons - subdividion"
                 }
             },
             "pop": {
-                "title": "CronList (2/2)",
-                "description": "Viac na https://github.com/bruxy70/CronList",
+                "title": "Crons (2/2)",
+                "description": "Viac na https://github.com/bruxy70/Crons",
                 "data": {
                     "cron_pop_named": "Ignorovať sviatky (volitelné)"
                 }

@@ -2,8 +2,8 @@
     "config": {
         "step": {
             "user": {
-                "title": "CronList (1/2)",
-                "description": "Définir le nom du capteur et configurer les paramètres du capteur. Plus d'info sur https://github.com/bruxy70/CronList",
+                "title": "Crons (1/2)",
+                "description": "Définir le nom du capteur et configurer les paramètres du capteur. Plus d'info sur https://github.com/bruxy70/Crons",
                 "data": {
                     "name": "Friendly name",
                     "icon_normal": "Icône (mdi:token-blank)",
@@ -14,15 +14,15 @@
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "CronList - subdividion"
+                    "subdiv": "Crons - subdividion"
                 }
             },
             "pop": {
-                "title": "CronList (2/2)",
-                "description": "Plus d'info sur https://github.com/bruxy70/CronList",
+                "title": "Crons (2/2)",
+                "description": "Plus d'info sur https://github.com/bruxy70/Crons",
                 "data": {
                     "cron_pop_named": "Ignorer les vacances (liste) - optionnel"
                 }
@@ -33,14 +33,14 @@
             "icon": "Les icônes doivent être spécifiées dans le format 'prefix:name'."
         },
         "abort": {
-            "single_instance_allowed": "Une seule configuration de CronList est autorisée"
+            "single_instance_allowed": "Une seule configuration de Crons est autorisée"
         }
     },
     "options": {
         "step": {
             "init": {
-                "title": "CronList (1/2)",
-                "description": "Définir le nom du capteur et configurer les paramètres du capteur. Plus d'info sur https://github.com/bruxy70/CronList",
+                "title": "Crons (1/2)",
+                "description": "Définir le nom du capteur et configurer les paramètres du capteur. Plus d'info sur https://github.com/bruxy70/Crons",
                 "data": {
                     "name": "Friendly name",
                     "icon_normal": "Icône (mdi:token-blank)",
@@ -51,15 +51,15 @@
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "CronList - subdividion"
+                    "subdiv": "Crons - subdividion"
                 }
             },
             "pop": {
-                "title": "CronList (2/2)",
-                "description": "Plus d'info sur https://github.com/bruxy70/CronList",
+                "title": "Crons (2/2)",
+                "description": "Plus d'info sur https://github.com/bruxy70/Crons",
                 "data": {
                     "cron_pop_named": "Ignorer les vacances (liste) - optionnel"
                 }

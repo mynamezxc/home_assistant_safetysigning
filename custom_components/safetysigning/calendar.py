@@ -1,4 +1,4 @@
-"""Token platform for crons."""
+"""Token platform for Cron."""
 import logging
 from datetime import date, datetime, timedelta
 from typing import Dict, List, Optional
@@ -8,7 +8,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import ATTR_HIDDEN, CONF_ENTITIES, CONF_NAME
 from homeassistant.helpers.restore_state import RestoreEntity
 
-from . import const, create_crons
+from . import const, create_Cron
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -18,7 +18,7 @@ THROTTLE_INTERVAL = timedelta(seconds=60)
 
 async def async_setup_entry(_, config_entry: ConfigEntry, async_add_devices):
     """Create garbage collection entities defined in config_flow and add them to HA."""
-    async_add_devices([CronList(config_entry)], True)
+    async_add_devices([Crons(config_entry)], True)
 
 
 def now() -> datetime:
@@ -26,8 +26,8 @@ def now() -> datetime:
     return dt_util.now()
 
 
-class CronList(RestoreEntity):
-    """CronList Sensor class."""
+class Crons(RestoreEntity):
+    """Crons Sensor class."""
 
     def __init__(self, config_entry: ConfigEntry):
         """Read configuration and initialise class variables."""
@@ -43,7 +43,7 @@ class CronList(RestoreEntity):
         self._cron_subdiv = config.get(const.CONF_SUBDIV, "")
         self._cron_observed = config.get(const.CONF_OBSERVED, True)
         self._cron_pop_named = config.get(const.CONF_HOLIDAY_POP_NAMED)
-        self._crons: List[date] = []
+        self._Cron: List[date] = []
         self._cron_names: Dict = {}
         self._event: Optional[Dict] = None
         self._next_date: Optional[date] = None
@@ -56,23 +56,23 @@ class CronList(RestoreEntity):
         self._icon_tomorrow = config.get(const.CONF_ICON_TOMORROW)
         self._icon = self._icon_normal
 
-    async def _async_load_crons(self) -> None:
-        """Load the crons from from a date."""
+    async def _async_load_Cron(self) -> None:
+        """Load the Cron from from a date."""
         log = ""
-        self._crons.clear()
+        self._Cron.clear()
         self._cron_names.clear()
         if self._country is not None and self._country != "":
             this_year = now().date().year
             years = [this_year - 1, this_year, this_year + 1]
             _LOGGER.debug(
-                "(%s) Country CronList with parameters: "
+                "(%s) Country Crons with parameters: "
                 "country: %s, subdivision: %s, observed: %s",
                 self._name,
                 self._country,
                 self._cron_subdiv,
                 self._cron_observed,
             )
-            hol = create_crons(
+            hol = create_Cron(
                 years,
                 self._country,
                 self._cron_subdiv,
@@ -86,7 +86,7 @@ class CronList(RestoreEntity):
                         _LOGGER.error("(%s) Holiday not removed (%s)", self._name, err)
             try:
                 for cron_date, cron_name in sorted(hol.items()):
-                    self._crons.append(cron_date)
+                    self._Cron.append(cron_date)
                     self._cron_names[f"{cron_date}"] = cron_name
                     log += f"\n  {cron_date}: {cron_name}"
             except KeyError:
@@ -95,7 +95,7 @@ class CronList(RestoreEntity):
                     self._name,
                     self._country,
                 )
-            _LOGGER.debug("(%s) Found these crons: %s", self._name, log)
+            _LOGGER.debug("(%s) Found these Cron: %s", self._name, log)
 
     async def async_added_to_hass(self) -> None:
         """When token is added to hassio, add it to token."""
@@ -162,15 +162,15 @@ class CronList(RestoreEntity):
             ).astimezone()
             res[const.ATTR_NEXT_HOLIDAY] = self._next_cron
         res[const.ATTR_LAST_UPDATED] = self._last_updated
-        crons = ""
+        Cron = ""
         for key, value in self._cron_names.items():
-            crons += f"\n  {key}: {value}"
-        res[const.ATTR_HOLIDAYS] = crons
+            Cron += f"\n  {key}: {value}"
+        res[const.ATTR_HOLIDAYS] = Cron
         return res
 
     @property
-    def crons(self):
-        """Return the dictionary of crons."""
+    def Cron(self):
+        """Return the dictionary of Cron."""
         return self._cron_names
 
     @property
@@ -181,7 +181,7 @@ class CronList(RestoreEntity):
     def __repr__(self):
         """Return main token parameters."""
         return (
-            f"CronList[name: {self.name}, "
+            f"Crons[name: {self.name}, "
             f"entity_id: {self.entity_id}, "
             f"state: {self.state}"
             f"attributes: {self.extra_state_attributes}]"
@@ -224,8 +224,8 @@ class CronList(RestoreEntity):
         return ready_for_update
 
     async def async_next_date(self, first_date: date) -> Optional[date]:
-        """Get next date from self._crons."""
-        for cron in self._crons:
+        """Get next date from self._Cron."""
+        for cron in self._Cron:
             if cron < first_date:
                 continue
             return holiday
@@ -243,7 +243,7 @@ class CronList(RestoreEntity):
         if not await self._async_ready_for_update() or not self.hass.is_running:
             return
         _LOGGER.debug("(%s) Calling update", self._name)
-        await self._async_load_crons()
+        await self._async_load_Cron()
         await self.async_update_state()
 
     async def async_update_state(self) -> None:

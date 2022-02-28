@@ -12,10 +12,10 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_NAME
 from homeassistant.core import callback
 
-from . import const, create_crons
+from . import const, create_Cron
 
 
-class CronListShared:
+class CronsShared:
     """Store configuration for both YAML and config_flow."""
 
     def __init__(self, data: Dict):
@@ -126,17 +126,17 @@ class CronListShared:
         if user_input is not None and user_input:
             self.update_data(user_input)
             return True
-        hol = create_crons(
+        hol = create_Cron(
             [dt_util.now().date().year],
             self._data.get(const.CONF_COUNTRY, ""),
             self._data.get(const.CONF_SUBDIV, ""),
             self._data.get(const.CONF_OBSERVED, True),
         )
-        list_crons = {h: h for h in sorted(hol.values())}
+        list_Cron = {h: h for h in sorted(hol.values())}
         self.data_schema.clear()
         self.data_schema[
             self.optional(const.CONF_HOLIDAY_POP_NAMED, user_input)
-        ] = cv.multi_select(list_crons)
+        ] = cv.multi_select(list_Cron)
         return False
 
     @property
@@ -146,15 +146,15 @@ class CronListShared:
 
 
 @config_entries.HANDLERS.register(const.DOMAIN)
-class CronListFlowHandler(config_entries.ConfigFlow):
-    """Config flow for crons."""
+class CronsFlowHandler(config_entries.ConfigFlow):
+    """Config flow for Cron."""
 
     VERSION = const.VERSION
     CONNECTION_CLASS = config_entries.CONN_CLASS_LOCAL_POLL
 
     def __init__(self):
         """Initialize."""
-        self.shared_class = CronListShared({"unique_id": str(uuid.uuid4())})
+        self.shared_class = CronsShared({"unique_id": str(uuid.uuid4())})
 
     async def __post_init__(self):
         """Pass Hass object to he shared class."""
@@ -197,9 +197,9 @@ class CronListFlowHandler(config_entries.ConfigFlow):
     async def async_step_pop(
         self, user_input: Dict = {}, re_entry=True
     ):  # pylint: disable=dangerous-default-value
-        """Step 3 - enter crons to pop.
+        """Step 3 - enter Cron to pop.
 
-        Can be submitted without selecting any crons to pop.
+        Can be submitted without selecting any Cron to pop.
         In this case the user input will be blank.
         So checking if it is blank won't help, checking re_entry field
         """
@@ -241,7 +241,7 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
 
     def __init__(self, config_entry: ConfigEntry):
         """Create and initualize class variables."""
-        self.shared_class = CronListShared(config_entry.data)
+        self.shared_class = CronsShared(config_entry.data)
 
     async def async_step_init(self, user_input: Optional[Dict] = None):
         """Genral parameters."""
@@ -274,9 +274,9 @@ class OptionsFlowHandler(config_entries.OptionsFlow):
     async def async_step_pop(
         self, user_input: Dict = {}, re_entry=True
     ):  # pylint: disable=dangerous-default-value
-        """Step 3 - enter crons to pop.
+        """Step 3 - enter Cron to pop.
 
-        Can be submitted without selecting any crons to pop.
+        Can be submitted without selecting any Cron to pop.
         In this case the user input will be blank.
         So checking if it is blank won't help, checking re_entry field
         """

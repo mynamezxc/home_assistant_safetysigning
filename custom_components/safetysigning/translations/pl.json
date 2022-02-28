@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Święta (1/2)",
-                "description": "Wprowadź nazwę dla encji i skonfiguruj jej parametry. Więcej informacji na stronie https://github.com/bruxy70/CronList",
+                "description": "Wprowadź nazwę dla encji i skonfiguruj jej parametry. Więcej informacji na stronie https://github.com/bruxy70/Crons",
                 "data": {
                     "name": "Przyjazna nazwa",
                     "icon_normal": "Ikona dzień powszedni (mdi:token-blank) - opcjonalnie",
@@ -14,15 +14,15 @@
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "Święta państwowe - prowincje (opcjonalnie) - BRAK dla PL patrz https://github.com/dr-prodigy/python-crons"
+                    "subdiv": "Święta państwowe - prowincje (opcjonalnie) - BRAK dla PL patrz https://github.com/dr-prodigy/python-Cron"
                 }
             },
             "pop": {
                 "title": "Święta (2/2)",
-                "description": "Więcej informacji na stronie https://github.com/bruxy70/CronList",
+                "description": "Więcej informacji na stronie https://github.com/bruxy70/Crons",
                 "data": {
                     "cron_pop_named": "Ignoruj święta (lista) - opcjonalnie"
                 }
@@ -40,7 +40,7 @@
         "step": {
             "init": {
                 "title": "Święta (1/2)",
-                "description": "Wprowadź nazwę dla encji i skonfiguruj jej parametry. Więcej informacji na stronie https://github.com/bruxy70/CronList",
+                "description": "Wprowadź nazwę dla encji i skonfiguruj jej parametry. Więcej informacji na stronie https://github.com/bruxy70/Crons",
                 "data": {
                     "icon_normal": "Ikona dzień powszedni (mdi:token-blank) - opcjonalnie",
                     "icon_tomorrow": "Ikona dzień świąteczny jutro (mdi:token-arrow-right) - opcjonalnie",
@@ -50,15 +50,15 @@
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "Święta państwowe - prowincje (opcjonalnie) - BRAK dla PL patrz https://github.com/dr-prodigy/python-crons"
+                    "subdiv": "Święta państwowe - prowincje (opcjonalnie) - BRAK dla PL patrz https://github.com/dr-prodigy/python-Cron"
                 }
             },
             "pop": {
                 "title": "Święta (2/2)",
-                "description": "Więcej informacji na stronie https://github.com/bruxy70/CronList",
+                "description": "Więcej informacji na stronie https://github.com/bruxy70/Crons",
                 "data": {
                     "cron_pop_named": "Ignoruj święta (lista) - opcjonalnie"
                 }

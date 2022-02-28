@@ -70,7 +70,7 @@ async def async_remove_entry(hass: HomeAssistant, config_entry: ConfigEntry):
         await hass.config_entries.async_forward_entry_unload(
             config_entry, const.TOKEN_PLATFORM
         )
-        _LOGGER.info("Successfully removed token from the crons integration")
+        _LOGGER.info("Successfully removed token from the Cron integration")
     except ValueError:
         pass
 
@@ -125,8 +125,8 @@ async def update_listener(hass: HomeAssistant, entry) -> None:
     )
 
 
-def create_crons(years: List, country: str, subdiv: str, observed: bool):
-    """Create crons from parameters."""
+def create_Cron(years: List, country: str, subdiv: str, observed: bool):
+    """Create Cron from parameters."""
     kwargs: Dict[str, Any] = {"years": years}
     if subdiv != "":
         kwargs["subdiv"] = subdiv
@@ -134,4 +134,4 @@ def create_crons(years: List, country: str, subdiv: str, observed: bool):
     # pylint: disable=maybe-no-member
     if country == "SE":
         return holidays.Sweden(include_sundays=False, **kwargs)
-    return holidays.country_crons(country, **kwargs)
+    return holidays.country_Cron(country, **kwargs)

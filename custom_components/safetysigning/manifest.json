@@ -1,9 +1,9 @@
 {
   "domain": "safetysigning",
-  "name": "CronList",
+  "name": "Safety Signing",
   "version": "1.0",
-  "documentation": "https://github.com/bruxy70/CronList/",
-  "issue_tracker": "https://github.com/bruxy70/CronList/issues",
+  "documentation": "https://github.com/mynamezxc/home_assistant_safetysigning",
+  "issue_tracker": "https://github.com/mynamezxc/home_assistant_safetysigning/issues",
   "iot_class": "calculated",
   "dependencies": [],
   "config_flow": true,
@@ -12,6 +12,6 @@
   ],
   "requirements": [
     "python-dateutil>=2.8.2",
-    "crons>=0.13"
+    "Cron>=0.13"
   ]
 }

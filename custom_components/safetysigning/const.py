@@ -1,21 +1,21 @@
 """Define constants used in garbage_collection."""
 
-# Constants for crons.
+# Constants for Cron.
 # Base component constants
 DOMAIN = "safetysigning"
 TOKEN_PLATFORM = "token"
-ATTRIBUTION = "Data from this is provided by crons."
+ATTRIBUTION = "Data from this is provided by Cron."
 
 VERSION = 2
 
 ATTR_NEXT_DATE = "next_date"
 ATTR_NEXT_HOLIDAY = "next_cron"
 ATTR_LAST_UPDATED = "last_updated"
-ATTR_HOLIDAYS = "crons"
+ATTR_HOLIDAYS = "Cron"
 
 # Device classes
 BINARY_SENSOR_DEVICE_CLASS = "connectivity"
-DEVICE_CLASS = "crons__schedule"
+DEVICE_CLASS = "Cron__schedule"
 
 # Configuration
 CONF_TOKEN = "token"

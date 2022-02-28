@@ -2,29 +2,29 @@
     "config": {
         "step": {
             "user": {
-                "title": "CronList (1/2)",
-                "description": "Immetti il nome del sensore e configura i suoi parametri. Maggiori informazioni su https://github.com/bruxy70/CronList",
+                "title": "Crons (1/2)",
+                "description": "Immetti il nome del sensore e configura i suoi parametri. Maggiori informazioni su https://github.com/bruxy70/Crons",
                 "data": {
                     "name": "Nome personalizzato",
                     "icon_normal": "Icona (mdi:token-blank)",
                     "icon_tomorrow": "Icona raccolta domani (mdi:token-arrow-right)",
                     "icon_today": "Icona raccolta oggi (mdi:token-check)",
-                    "country": "Move crons to next day (optional)",
+                    "country": "Move Cron to next day (optional)",
                     "observed": "Observed (optional)"
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "CronList - subdividion"
+                    "subdiv": "Crons - subdividion"
                 }
             },
             "pop": {
-                "title": "CronList (2/2)",
-                "description": "Maggiori informazioni su https://github.com/bruxy70/CronList",
+                "title": "Crons (2/2)",
+                "description": "Maggiori informazioni su https://github.com/bruxy70/Crons",
                 "data": {
-                    "cron_pop_named": "Ignore crons (list) - optional"
+                    "cron_pop_named": "Ignore Cron (list) - optional"
                 }
             }
         },
@@ -39,28 +39,28 @@
     "options": {
         "step": {
             "init": {
-                "title": "CronList (1/2)",
-                "description": "Immetti il nome del sensore e configura i suoi parametri. Maggiori informazioni su https://github.com/bruxy70/CronList",
+                "title": "Crons (1/2)",
+                "description": "Immetti il nome del sensore e configura i suoi parametri. Maggiori informazioni su https://github.com/bruxy70/Crons",
                 "data": {
                     "icon_normal": "Icona (mdi:token-blank)",
                     "icon_tomorrow": "Icona raccolta domani (mdi:token-arrow-right)",
                     "icon_today": "Icona raccolta oggi (mdi:token-check)",
-                    "country": "Move crons to next day (optional)",
+                    "country": "Move Cron to next day (optional)",
                     "observed": "Observed (optional)"
                 }
             },
             "subdiv": {
-                "title": "CronList - (1½/2)",
-                "description": "More info on https://github.com/bruxy70/CronList",
+                "title": "Crons - (1½/2)",
+                "description": "More info on https://github.com/bruxy70/Crons",
                 "data": {
-                    "subdiv": "CronList - subdividion"
+                    "subdiv": "Crons - subdividion"
                 }
             },
             "pop": {
-                "title": "CronList (2/2)",
-                "description": "Maggiori informazioni su https://github.com/bruxy70/CronList",
+                "title": "Crons (2/2)",
+                "description": "Maggiori informazioni su https://github.com/bruxy70/Crons",
                 "data": {
-                    "cron_pop_named": "Ignore crons (list) - optional"
+                    "cron_pop_named": "Ignore Cron (list) - optional"
                 }
             }
         },

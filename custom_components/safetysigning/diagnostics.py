@@ -1,4 +1,4 @@
-"""Diagnostics support for CronList."""
+"""Diagnostics support for Crons."""
 from typing import Any, Dict
 
 from homeassistant.config_entries import ConfigEntry
@@ -19,7 +19,7 @@ async def async_get_config_entry_diagnostics(
         if entities[entity].unique_id == entry.data["unique_id"]
     ][0]
     attributes = entity_data.extra_state_attributes
-    attributes["crons"] = entity_data.crons
+    attributes["Cron"] = entity_data.Cron
     data = {
         "entity_id": entity_data.entity_id,
         "state": entity_data.state,
