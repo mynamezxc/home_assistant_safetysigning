@@ -1,4 +1,4 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs) [![Crons](https://img.shields.io/github/v/release/bruxy70/Crons.svg?1)](https://github.com/bruxy70/Crons) ![Maintenance](https://img.shields.io/maintenance/yes/2022.svg)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs) [![Holidays](https://img.shields.io/github/v/release/bruxy70/Holidays.svg?1)](https://github.com/bruxy70/Holidays) ![Maintenance](https://img.shields.io/maintenance/yes/2022.svg)
 
 [![Buy me a coffee](https://img.shields.io/static/v1.svg?label=Buy%20me%20a%20coffee&message=🥨&color=black&logo=buy%20me%20a%20coffee&logoColor=white&labelColor=6f4e37)](https://www.buymeacoffee.com/3nXx0bJDP)
 
@@ -8,19 +8,19 @@
 
 {% endif %}
 
-# safetysigning
+# Holidays
 
-The `Cron` componnent is a **Home Assistant** integration that creates `token` entities with a list of public Cron in a country, based on the Python [Crons](https://github.com/dr-prodigy/python-Cron) library.
-It's primary purpose is to work with `garbage_collection` integration to automatically move entities with `manual_update` automation blueprints. But it can also be used independently to show next public cron in given country (or multiple countries).
+The `holidays` componnent is a **Home Assistant** integration that creates `calendar` entities with a list of public holidays in a country, based on the Python [Holidays](https://github.com/dr-prodigy/python-holidays) library.
+It's primary purpose is to work with `garbage_collection` integration to automatically move entities with `manual_update` automation blueprints. But it can also be used independently to show next public holiday in given country (or multiple countries).
 
 ## Parameters
 
-| Parameter        | Required | Description                                                                                                                                             |
-| :--------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `Country`        | Yes      | Country Cron - the country code (see [Cron](https://github.com/dr-prodigy/python-Cron) for the list of valid country codes).<br/>_Example:_ `US`        |
-| `Observed`       | No       | Observed - when Cron are celebrated on dates that are not the actual event's anniversary date (see [Cron](https://github.com/dr-prodigy/python-Cron) ). |
-| `Subdivision`    | No       | State/Province/District... (see [Cron](https://github.com/dr-prodigy/python-Cron) ).                                                                    |
-| `Pop named Cron` | No       | Ignore Cron (select from the list of cron names) _Example:_ `"Columbus Day"`, `"Veterans Day"`                                                          |
+| Parameter | Required | Description
+| :-- | :-- | :--
+| `Country` | Yes | Country holidays - the country code (see [holidays](https://github.com/dr-prodigy/python-holidays) for the list of valid country codes).<br/>*Example:* `US`
+| `Observed` | No | Observed - when holidays are celebrated on dates that are not the actual event's anniversary date (see [holidays](https://github.com/dr-prodigy/python-holidays) ).
+| `Subdivision` | No | State/Province/District... (see [holidays](https://github.com/dr-prodigy/python-holidays) ).
+| `Pop named holidays` | No | Ignore holidays (select from the list of holiday names) *Example:* `"Columbus Day"`, `"Veterans Day"`
 
 ## State and Attributes
 
@@ -30,9 +30,9 @@ The State contains the number of days to the next country holiday. It is `0` if 
 
 ### Attributes
 
-| Attribute   | Description                                                                                                                                                                                                |
-| :---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `next_date` | The date of cron                                                                                                                                                                                           |
-| `Cron`      | List of used country (last year, this year and next year). This is used by the `garbage_collection` blueprints to offset collections if they fall on a public cron (or if cron was earlier on in the week) |
+| Attribute | Description
+|:----------|------------
+| `next_date` | The date of holiday
+| `holidays` | List of used country (last year, this year and next year). This is used by the `garbage_collection` blueprints to offset collections if they fall on a public holiday (or if holiday was earlier on in the week)
 
-Check the <a href="https://github.com/bruxy70/Crons">repository</a> for installation instructions.
+Check the <a href="https://github.com/bruxy70/Holidays">repository</a> for installation instructions.

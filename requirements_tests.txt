@@ -1,4 +1,4 @@
-Cron>=0.13
+holidays>=0.13
 python-dateutil>=2.8.2
 homeassistant>=2022.2.8
 pytest-homeassistant-custom-component>=0.6.14
